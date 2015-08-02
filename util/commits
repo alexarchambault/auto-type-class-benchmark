@@ -15,5 +15,5 @@ aabcc2a4 3. Helper type classes for tails
 aa82a2ba 4. Usual implicit prioritisation
 b823fab0 5. No superfluous Lazy wrapper
 e5954868 6. Using Strict
-5938da82 6. Cached
-b4d36c6e 7. All Strict replaced by Lazy
+5938da82 7. Cached
+b4d36c6e 8. All Strict replaced by Lazy
