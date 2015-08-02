@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+DIR="$1"
+
+if [ "$DIR" = "" ]; then
+  echo "Usage: $0 result-dir" 1>&2
+  exit 255
+fi
+
+cd "$DIR"
+echo "shapeless-commit;upickle-commit;run;time_sec"
+for i in $(comm -23 <(ls) <(grep -l error *) | sort); do
+  echo "$(echo "$i;$(grep "Total time" "$i" | sed 's/.*Total time: \([0-9]*\) s,.*/\1/')" | sed 's/upickle-test-//' | sed 's/--*/;/g')"
+done

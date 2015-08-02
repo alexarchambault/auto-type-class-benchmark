@@ -1,0 +1,43 @@
+#!/bin/bash
+set -e
+
+DIR="$(dirname "$(readlink -f "$0")")"
+mkdir -p "$DIR/results"
+
+RESULTS_DIR="$(pwd)/results"
+mkdir -p "$RESULTS_DIR"
+
+[ -d upickle-pprint ] || git clone https://github.com/alexarchambault/upickle-pprint.git -b topic/optim
+cd upickle-pprint
+
+function runAll() {
+  case $# in
+    0)
+      SUFFIX=""
+      ;;
+    1)
+      SUFFIX="-$1"
+      ;;
+  esac
+
+  for u in $(cat "$DIR/upickle-pprint-commits"); do
+    for s in $(cat "$DIR/shapeless-commits"); do
+      F="$RESULTS_DIR/upickle-test-$s-$u$SUFFIX"
+      [ -e "$F" ] || (
+        echo "Testing upickle $u / shapeless $s"
+        git checkout -q "$u" &&
+        git clean -xfdq &&
+        mv build.sbt build.sbt0 &&
+        sed "s/2\.2\.6-SNAPSHOT[^\"]*\"/2\.2\.6-SNAPSHOT-$s\"/" < build.sbt0 > build.sbt &&
+        sbt upickleJVM/test > "$F" 2>&1 &&
+        git checkout -q build.sbt
+      )
+    done
+  done
+}
+
+N=5
+
+for i in $(seq 1 $N); do
+  runAll $i
+done
