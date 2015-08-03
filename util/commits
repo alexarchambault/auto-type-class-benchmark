@@ -1,4 +1,4 @@
-shapeless: topic/lazyextensions
+shapeless: topic/lazyextensions-optim
 3fd06cd0 0. master
 0fa6a9d4 1. v0
 2085addf 2. Strict Implicit
@@ -6,6 +6,7 @@ shapeless: topic/lazyextensions
 cd05b4af 4. cached
 0760706f 5. Don't clear scalac implicit cache
 41f6f6c5 6. Revert inlining
+f6442741 7. LowPriority instead of Priority
 
 upickle-pprint: topic/optim
 19052c3f 0. master

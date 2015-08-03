@@ -5,7 +5,7 @@ echo "$0"
 D="$(dirname "$(readlink -f "$0")")"
 echo $D
 
-[ -d shapeless ] || git clone https://github.com/alexarchambault/shapeless.git -b topic/lazyextensions
+[ -d shapeless ] || git clone https://github.com/alexarchambault/shapeless.git -b topic/lazyextensions-optim
 cd shapeless
 
 function publish() {
