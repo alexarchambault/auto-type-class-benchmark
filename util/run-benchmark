@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DIR="$(dirname "$(readlink -f "$0")")"
+DIR="$(cd "$(dirname "$0")"; pwd)"
 mkdir -p "$DIR/results"
 
 RESULTS_DIR="$(pwd)/results"
@@ -28,9 +28,11 @@ function runAll() {
         git checkout -q "$u" &&
         git clean -xfdq &&
         mv build.sbt build.sbt0 &&
-        sed "s/2\.2\.6-SNAPSHOT[^\"]*\"/2\.2\.6-SNAPSHOT-$s\"/" < build.sbt0 > build.sbt &&
-        sbt upickleJVM/test > "$F" 2>&1 &&
-        git checkout -q build.sbt
+        sed "s/2\.2\.6-SNAPSHOT[^\"]*\"/2\.3\.0-SNAPSHOT-$s\"/" < build.sbt0 > build.sbt &&
+        cp "$DIR/repo.scala" project/ &&
+        sbt upickleJVM/test:compile > "$F" 2>&1;
+        git checkout -q build.sbt &&
+        git checkout -q project/repo.scala
       )
     done
   done

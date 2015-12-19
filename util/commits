@@ -1,20 +1,10 @@
 shapeless: topic/lazyextensions-optim
-3fd06cd0 0. master
-0fa6a9d4 1. v0
-2085addf 2. Strict Implicit
-22b85cb8 3. inlining
-cd05b4af 4. cached
-0760706f 5. Don't clear scalac implicit cache
-41f6f6c5 6. Revert inlining
-f6442741 7. LowPriority instead of Priority
+28770722 0. master
+# f63fc628 1. inlining
 
 upickle-pprint: topic/optim
-19052c3f 0. master
-2a63bef3 1. Lazy only, Implicit, no Strict or Cached
-4266949f 2. No Lazy tails
-aabcc2a4 3. Helper type classes for tails
-aa82a2ba 4. Usual implicit prioritisation
-b823fab0 5. No superfluous Lazy wrapper
-e5954868 6. Using Strict
-5938da82 7. Cached
-b4d36c6e 8. All Strict replaced by Lazy
+eef7ba3b 0. benchmark/macros
+a4610359 1. benchmark/type-level-crazy
+962526e1 2. benchmark/shapeless-2.2
+69fd7f8c 3. benchmark/shapeless-2.3
+9713b2a8 4. benchmark/hybrid

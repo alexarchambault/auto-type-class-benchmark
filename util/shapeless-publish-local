@@ -2,21 +2,21 @@
 set -ev
 
 echo "$0"
-D="$(dirname "$(readlink -f "$0")")"
+D="$(cd "$(dirname "$0")"; pwd)"
 echo $D
 
-[ -d shapeless ] || git clone https://github.com/alexarchambault/shapeless.git -b topic/lazyextensions-optim
+[ -d shapeless ] || git clone https://github.com/alexarchambault/shapeless.git -b topic/derive
 cd shapeless
 
 function publish() {
   git checkout "$1" &&
-  echo "version in ThisBuild := \"2.2.6-SNAPSHOT-$1\"" > version.sbt &&
+  echo "version in ThisBuild := \"2.3.0-SNAPSHOT-$1\"" > version.sbt &&
   sbt publishLocal &&
   git checkout version.sbt
 }
 
 for i in $(cat "$D/shapeless-commits"); do
-  if [ ! -d "$HOME/.ivy2/local/com.chuusai/shapeless_2.11/2.2.6-SNAPSHOT-$i" ]; then
+  if [ ! -d "$HOME/.ivy2/local/com.chuusai/shapeless_2.11/2.3.0-SNAPSHOT-$i" ]; then
     publish "$i"
   fi
 done

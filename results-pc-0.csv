@@ -1,0 +1,76 @@
+shapeless-commit;upickle-commit;run;time_sec
+28770722;3 - shapeless 2.3;1;82
+28770722;3 - shapeless 2.3;10;83
+28770722;3 - shapeless 2.3;11;83
+28770722;3 - shapeless 2.3;12;86
+28770722;3 - shapeless 2.3;13;83
+28770722;3 - shapeless 2.3;14;86
+28770722;3 - shapeless 2.3;15;82
+28770722;3 - shapeless 2.3;2;91
+28770722;3 - shapeless 2.3;3;85
+28770722;3 - shapeless 2.3;4;90
+28770722;3 - shapeless 2.3;5;83
+28770722;3 - shapeless 2.3;6;79
+28770722;3 - shapeless 2.3;7;84
+28770722;3 - shapeless 2.3;8;91
+28770722;3 - shapeless 2.3;9;83
+28770722;2 - shapeless 2.2;1;88
+28770722;2 - shapeless 2.2;10;113
+28770722;2 - shapeless 2.2;11;110
+28770722;2 - shapeless 2.2;12;91
+28770722;2 - shapeless 2.2;13;93
+28770722;2 - shapeless 2.2;14;86
+28770722;2 - shapeless 2.2;15;95
+28770722;2 - shapeless 2.2;2;94
+28770722;2 - shapeless 2.2;3;96
+28770722;2 - shapeless 2.2;4;96
+28770722;2 - shapeless 2.2;5;90
+28770722;2 - shapeless 2.2;6;93
+28770722;2 - shapeless 2.2;7;90
+28770722;2 - shapeless 2.2;8;94
+28770722;2 - shapeless 2.2;9;95
+28770722;4 - hybrid;1;59
+28770722;4 - hybrid;10;49
+28770722;4 - hybrid;11;59
+28770722;4 - hybrid;12;58
+28770722;4 - hybrid;13;58
+28770722;4 - hybrid;14;56
+28770722;4 - hybrid;15;51
+28770722;4 - hybrid;2;58
+28770722;4 - hybrid;3;59
+28770722;4 - hybrid;4;57
+28770722;4 - hybrid;5;58
+28770722;4 - hybrid;6;57
+28770722;4 - hybrid;7;50
+28770722;4 - hybrid;8;52
+28770722;4 - hybrid;9;55
+28770722;1 - type-level crazy;1;170
+28770722;1 - type-level crazy;10;161
+28770722;1 - type-level crazy;11;166
+28770722;1 - type-level crazy;12;163
+28770722;1 - type-level crazy;13;166
+28770722;1 - type-level crazy;14;167
+28770722;1 - type-level crazy;15;164
+28770722;1 - type-level crazy;2;165
+28770722;1 - type-level crazy;3;166
+28770722;1 - type-level crazy;4;163
+28770722;1 - type-level crazy;5;169
+28770722;1 - type-level crazy;6;166
+28770722;1 - type-level crazy;7;164
+28770722;1 - type-level crazy;8;170
+28770722;1 - type-level crazy;9;161
+28770722;0 - macros;1;35
+28770722;0 - macros;10;32
+28770722;0 - macros;11;32
+28770722;0 - macros;12;33
+28770722;0 - macros;13;33
+28770722;0 - macros;14;32
+28770722;0 - macros;15;32
+28770722;0 - macros;2;33
+28770722;0 - macros;3;32
+28770722;0 - macros;4;30
+28770722;0 - macros;5;33
+28770722;0 - macros;6;30
+28770722;0 - macros;7;34
+28770722;0 - macros;8;33
+28770722;0 - macros;9;32
